@@ -18,6 +18,11 @@ npm start
 
 Front-end project structure based on [react-starter-project](https://github.com/rauschma/react-starter-project)
 
+## Related projects
+
+- [Colyseus Server](https://github.com/gamestdio/colyseus)
+- [Colyseus JavaScript Client](https://github.com/gamestdio/colyseus.js)
+
 ## License
 
 MIT
