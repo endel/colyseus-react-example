@@ -3,6 +3,7 @@
 A simple chat client and server to demonstrate how straightforward is to
 integrate [Colyseus](https://github.com/gamestdio/colyseus) room states with ReactJS.
 
+- **[Online demo](https://colyseus-react-example.herokuapp.com/)**
 - [View client source](js/main.js)
 - [View server source](server/chat_room.js)
 
