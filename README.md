@@ -1,4 +1,4 @@
-# colyseus-react
+# colyseus-react-example
 
 A simple chat client and server to demonstrate how straightforward is to
 integrate [Colyseus](https://github.com/gamestdio/colyseus) room states with ReactJS.
@@ -6,8 +6,8 @@ integrate [Colyseus](https://github.com/gamestdio/colyseus) room states with Rea
 ## Running locally:
 
 ```
-git clone git@github.com:endel/colyseus-react.git
-cd colyseus-react
+git clone https://github.com/endel/colyseus-react-example.git
+cd colyseus-react-example
 npm install
 npm start
 ```
