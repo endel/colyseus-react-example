@@ -25,7 +25,7 @@
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "colyseus": "^0.1.2",
-    "colyseus.js": "^0.1.5",
+    "colyseus.js": "^0.1.6",
     "express": "^4.13.3"
   }
 }
