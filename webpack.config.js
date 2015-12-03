@@ -7,9 +7,9 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var dir_js = path.resolve(__dirname, 'js');
 var dir_html = path.resolve(__dirname, 'html');
-var dir_build = path.resolve(__dirname, 'build');
+var dir_build = path.resolve(__dirname, 'server');
 
-module.exports = {
+var config = {
     entry: path.resolve(dir_js, 'main.js'),
     output: {
         path: dir_build,
@@ -34,7 +34,6 @@ module.exports = {
         ]
     },
     plugins: [
-        // Simply copies the files over
         new CopyWebpackPlugin([
             { from: dir_html } // to: output.path
         ]),
@@ -48,3 +47,10 @@ module.exports = {
     // Create Sourcemaps for the bundle
     devtool: 'source-map',
 };
+
+// remove react-hot loader on production
+if (process.env.NODE_ENV == 'production') {
+  config.module.loaders.shift()
+}
+
+module.exports = config

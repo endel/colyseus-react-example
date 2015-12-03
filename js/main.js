@@ -8,7 +8,13 @@ class Main extends React.Component {
   constructor() {
     super();
 
-    this.colyseus = new Colyseus("ws://localhost:2657")
+    // use current hostname/port as colyseus server endpoint
+    var endpoint = location.protocol.replace("http", "ws") + "//" + location.hostname;
+
+    // development server
+    if (location.port && location.port !== "80") { endpoint += ":2657" }
+
+    this.colyseus = new Colyseus(endpoint)
     this.chatRoom = this.colyseus.join('chat')
     this.chatRoom.on('setup', this.onUpdateRemote.bind(this))
     this.chatRoom.on('update', this.onUpdateRemote.bind(this))
