@@ -3,7 +3,7 @@ var Room = require('colyseus').Room
 class ChatRoom extends Room {
 
   constructor (options) {
-    // call 'update' method each 1 second
+    // call 'update' method each 100ms
     options.updateInterval = 100
     super(options, { messages: [] })
   }
