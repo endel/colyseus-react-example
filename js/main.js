@@ -48,7 +48,7 @@ class Main extends React.Component {
 
   onSubmit (e) {
     e.preventDefault()
-    this.colyseus.send(this.state.currentText)
+    this.chatRoom.send(this.state.currentText)
     this.setState({currentText: ""})
   }
 
