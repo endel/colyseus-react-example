@@ -16,9 +16,7 @@ class Main extends React.Component {
 
     this.colyseus = new Colyseus(endpoint)
     this.chatRoom = this.colyseus.join('chat')
-    this.chatRoom.on('setup', this.onUpdateRemote.bind(this))
     this.chatRoom.on('update', this.onUpdateRemote.bind(this))
-    this.chatRoom.on('patch', this.onPatchRemote.bind(this))
 
     this.state = {
       currentText: "",
@@ -26,18 +24,14 @@ class Main extends React.Component {
     };
   }
 
-  onUpdateRemote (newState) {
-    console.log("new state: ", newState)
+  onUpdateRemote (newState, patches) {
+    console.log("new state: ", newState, "patches:", patches)
     this.setState(newState, this.autoScroll.bind(this))
   }
 
   autoScroll () {
     var domMessages = findDOMNode(this.refs.messages)
     domMessages.scrollTop = domMessages.scrollHeight
-  }
-
-  onPatchRemote (patches) {
-    console.log("Patch: ", patches)
   }
 
   onInputChange (e) {
