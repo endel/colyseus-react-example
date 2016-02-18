@@ -9,15 +9,17 @@ class ChatRoom extends Room {
   }
 
   onJoin (client) {
-    this.sendState(client)
+    console.log(client.id, "joined ChatRoom!")
     this.state.messages.push(`${ client.id } joined. Say hello!`)
   }
 
   onMessage (client, data) {
+    console.log(client.id, "sent message on ChatRoom")
     this.state.messages.push(`${ client.id }: ${ data }`)
   }
 
   onLeave (client) {
+    console.log(client.id, "leaved ChatRoom")
     this.state.messages.push(`${ client.id } leaved.`)
   }
 }
