@@ -3,7 +3,9 @@ var Room = require('colyseus').Room
 class ChatRoom extends Room {
   constructor (options) {
     // call 'update' method each 50ms
-    super(options, 1000 / 20)
+    super(options)
+
+    this.setPatchRate(1000 / 20);
 
     this.setState({ messages: [] })
   }
@@ -19,8 +21,8 @@ class ChatRoom extends Room {
   }
 
   onLeave (client) {
-    console.log(client.id, "leaved ChatRoom")
-    this.state.messages.push(`${ client.id } leaved.`)
+    console.log(client.id, "left ChatRoom")
+    this.state.messages.push(`${ client.id } left.`)
   }
 }
 

@@ -24,8 +24,8 @@
   "dependencies": {
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "colyseus": "^0.3.0",
-    "colyseus.js": "^0.2.0",
+    "colyseus": "^0.4.2",
+    "colyseus.js": "^0.4.2",
     "express": "^4.13.3"
   }
 }
