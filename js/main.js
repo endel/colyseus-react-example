@@ -15,7 +15,7 @@ class Main extends React.Component {
     if (location.port && location.port !== "80") { endpoint += ":2657" }
 
     this.colyseus = new Colyseus(endpoint)
-    this.chatRoom = this.colyseus.join('chat')
+    this.chatRoom = this.colyseus.join('chat', { channel: window.location.hash || "#default" })
     this.chatRoom.on('update', this.onUpdateRemote.bind(this))
 
     this.state = {

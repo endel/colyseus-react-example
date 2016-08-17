@@ -5,9 +5,17 @@ class ChatRoom extends Room {
     // call 'update' method each 50ms
     super(options)
 
+    this.channel = options.channel;
+
     this.setPatchRate(1000 / 20);
 
-    this.setState({ messages: [] })
+    this.setState({
+      messages: [ `Welcome to ${ options.channel } ChatRoom instance.` ]
+    })
+  }
+
+  requestJoin (options) {
+    return options.channel === this.channel;
   }
 
   onJoin (client) {
