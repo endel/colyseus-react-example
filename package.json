@@ -27,5 +27,8 @@
     "colyseus": "^0.4.2",
     "colyseus.js": "^0.4.2",
     "express": "^4.13.3"
+  },
+  "engines": {
+    "node": "6.3.0"
   }
 }
