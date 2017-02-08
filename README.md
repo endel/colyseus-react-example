@@ -10,7 +10,7 @@ integrate [Colyseus](https://github.com/gamestdio/colyseus) room states with Rea
 The [ChatRoom](server/chat_room.js) room handler is able to handle different
 instances by passing the [room name in the URL hash](js/main.js#L18).
 
-Examples: [#colyseus](https://colyseus-react-example.herokuapp.com/#node),
+Examples: [#colyseus](https://colyseus-react-example.herokuapp.com/#colyseus),
 [#react](https://colyseus-react-example.herokuapp.com/#react),
 [#node](https://colyseus-react-example.herokuapp.com/#node).
 
